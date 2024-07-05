@@ -48,4 +48,4 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generati
 ls -la :  check all files 
 
 ## reference
-[1]: https://www.youtube.com/watch?v=RGOj5yH7evk&t=2822s
+youtube :   https://www.youtube.com/watch?v=RGOj5yH7evk&t=2822s
