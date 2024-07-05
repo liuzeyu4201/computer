@@ -46,3 +46,8 @@ git pull origin main # that include two commands{ git fetch 命令从 origin 拉
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 ls -la :  check all files 
+
+
+
+## reference
+youtube: https://www.youtube.com/watch?v=RGOj5yH7evk&t=2822s
