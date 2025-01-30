@@ -1,30 +1,28 @@
-class Person:
-    def __init__(self,name,age,num):
-        self.name=name
-        try:
-            self.age=int(age)
-        except:
-            print("ValueError: not a number")
-        try: 
-            self.num=int(num)
-        except:
-            print("ValueError: not a number")
-    def prime(self):
-        return self.age + self.num
-    
+class Student:
+    def __init__(self, name, house, patronus):
+        if not name:
+            raise ValueError("Missing name")
+        if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
+            raise ValueError("Invalid house")
+        self.name = name
+        self.house = house
+        self.patronus = patronus
+
+    def __str__(self):
+        return f"{self.name} from {self.house}"
+
 
 def main():
-    person=getname()
-    pr=person.prime()
-    print(f"he's name is{person.name},{person.age} years old,{pr}")
-    print(Person.__dict__)
-    
-    
-def getname():
-    name=input("name:")
-    age=input("age:")
-    num=input("num:")
-    return Person(name,age,num)
-    
-if   __name__=="__main__":
+    student = get_student()
+    print(student)
+
+
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    patronus = input("Patronus: ")
+    return Student(name, house, patronus)
+
+
+if __name__ == "__main__":
     main()

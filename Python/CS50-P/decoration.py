@@ -1,32 +1,37 @@
-class Worker:
-
-    def __init__(self, name, salary):
+class Student:
+    def __init__(self, name, house):
+        if not name:
+            raise ValueError("Invalid name")
         self.name = name
-        self.salary = salary
+        self.house = house
 
-    @property     
-    # 先使用property装饰原函数，装饰之后就可以使用setter和deleter方法来进行装饰并有更多的功能了
-    # 这里默认已经有了getter的功能，也就是能够获取到这个属性的能力
-    def view_salary(self):
-        return self.salary
+    def __str__(self):
+        return f"{self.name} from {self.house}"
 
-    @view_salary.setter
-    # setter装饰器能够使我们在类外部重新设置view_salary这个属性
-    # 而没有setter的话就会报错  AttributeError: can't set attribute
-    def view_salary(self, new_salary):
-        self.salary = new_salary
-        return new_salary
+    # Getter for house
+    @property
+    def house(self):
+        return self._H # 修改 house 成为 函数. _house 为内部变量
 
-    @view_salary.deleter
-    # deleter装饰器的设置使我们可以在类外部使用del删除这个属性，但是这里我试了将self.salary
-    # 设置为其它值也是可以的哦，这个值设置非空的话还是会有属性继续存在的哦。也就是在类外部使用
-    # del的功能取决于你自己在这里设置的操作
-    # 我这里是设置为空值了
-    def view_salary(self):
-        self.salary = None
+    # Setter for house
+    @house.setter
+    def house(self, house):
+        if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
+            raise ValueError("Invalid house")
+        self._H = house
 
-A = Worker('J',1000)
 
-A.view_salary = 2000
+def main():
+    student = get_student()
+    student.house='Hufflepuff'
+    print(student)
 
-print(A.view_salary)
+
+def get_student():
+    name = input("Name: ")
+    house = input("House: ")
+    return Student(name, house)
+
+
+if __name__ == "__main__":
+    main()

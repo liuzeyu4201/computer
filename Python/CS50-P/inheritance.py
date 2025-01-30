@@ -1,6 +1,6 @@
 class Parent:
     def __init__(self,name):
-        self.namesname
+        self.name=name
     def Gen(self,num):
         print(f"{self.name}'s number is {num}")
         
