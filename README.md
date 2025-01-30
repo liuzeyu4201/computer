@@ -1,3 +1,3 @@
 # abstract
 
-This is all about computer notes
+计算机基础知识
