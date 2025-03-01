@@ -24,7 +24,7 @@ Mike:P(m),S(m)
 
 **例子**
 
-![图2](/home/liuzeyu/LifeChoice/2024-01-24/技能/block_chain/imgs/trans.png)
+![图2](../imgs/trans.png)
 
 BOB 使用 alice的公钥加密信息，Servers 收到信息有，bob的公钥，alice的公钥，加密后的信息。
 
@@ -40,10 +40,10 @@ alice收到信息后使用私钥解密。
 
 此时确认交易正常，发给alice。
 
-![图2](/home/liuzeyu/LifeChoice/2024-01-24/技能/block_chain/imgs/digtial_sign.png)
+![图2](../imgs/digtial_sign.png)
 
 ## Bitcoin 中的加密
-![图2](/home/liuzeyu/LifeChoice/2024-01-24/技能/block_chain/imgs/bit_trans.png)
+![图2](../imgs/bit_trans.png)
 
 minner中错误，是A's public key
 

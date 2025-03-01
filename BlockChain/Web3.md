@@ -1,13 +1,13 @@
 # Web 3
 ## 1 .行业全貌- Web 3 = 区块链
 
-![图1](/home/liuzeyu/LifeChoice/2024-01-24/技能/block_chain/imgs/web3.png)
+![图1](../imgs/web3.png)
 
 
 
 ##    1.1 行业结构
 
-![图2](/home/liuzeyu/LifeChoice/2024-01-24/技能/block_chain/imgs/construction.png)
+![图2](../imgs/construction.png)
 
 1. 智能合约赌局
 

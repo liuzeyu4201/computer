@@ -80,14 +80,14 @@ Merkle Tree：
 
 Block Body中的数据结构用于保存交易数据。TX：Transaction exchange，即具体的交易数据。被保存在Body中。
 
-![图2](BlockChain/imgs/MerkleTree.png)
+![图2](../imgs/MerkleTree.png)
 
 
 
 比特币中有节点的概念，轻节点（light nodes）类似于手机节点，只保存少量信息，需要配合全节点（full nodes）完成操作。
 
 当轻节点想要确保一个交易已经写入区块链中需要向全节点请求蓝色hash value。向上计算root hash value 并于 header中的Root hash值比较,即可确认是否完成交易。
-![图2](BlockChain/imgs/Tx.png)
+![图2](../imgs/Tx.png)
 
 
 
@@ -98,7 +98,7 @@ Block Body中的数据结构用于保存交易数据。TX：Transaction exchange
 
 非对称加密体系： Public Key, Private Key. 公钥用于加密，私钥用于签名。
 
-![图3](BlockChain/imgs/key.png)
+![图3](../imgs/key.png)
 
 假设A 发布了一个向B转入3个比特币的交易，交易中A需要广播A的公钥，B的公钥类似于银行账户。
 
@@ -110,7 +110,7 @@ Block Body中的数据结构用于保存交易数据。TX：Transaction exchange
 
 发行加密货币要解决两个问题 1.double spending attack，2. “无中生有”。
 
-![图4](BlockChain/imgs/exchange.png)
+![图4](../imgs/exchange.png)
 
 在比特币交易中存在两种Hash Pointers，第一个在上文已经提到用于链接区块。在货币交易中引出第二个hash指针，用于记录货币来源。  在交易中供币方需要提供双方的公钥以及自己的货币来源，并用自己的私钥进行签名。
 
@@ -125,7 +125,7 @@ UTXO ：Unspent Transaction Output（set），集合将记录整个区块链中�
 
 例子：
 
-![图5](BlockChain/imgs/UTXO.png)
+![图5](../imgs/UTXO.png)
 
 
 
@@ -154,7 +154,7 @@ UTXO ：Unspent Transaction Output（set），集合将记录整个区块链中�
 比特币系统对矿工的奖励为（proof-of-work）。由两部分构成 Block Reward和记账奖励。
 
 初块奖励： 当矿工解出问题获得记账权后将会获得系统的初块奖励，根据系统设计每21万个区块后奖励折半，目前(15-3-2024)初块奖励为6.25个Bitcoin。根据计算系统中比特币总量为21W * 50 * (1+1/2+1/4+1/8.....) =2100W个。当比特币枯竭后将会进入记账奖励阶段。记账奖励：即收取交易费。
-![图3](BlockChain/imgs/fullnodes.png)
+![图3](../imgs/fullnodes.png)
 
 
 
@@ -163,7 +163,7 @@ UTXO ：Unspent Transaction Output（set），集合将记录整个区块链中�
 ## 实例：
 
 
-![图6](BlockChain/imgs/example.png)
+![图6](../imgs/example.png)
 
 
 |LeftSide：|RightSide|
@@ -201,7 +201,7 @@ https://www.coinwarz.com/mining/bitcoin/hashrate-chart
 
 difficulty : 难度度量~ 挖矿竞争度
 https://www.coinwarz.com/mining/bitcoin/difficulty-chart
-![图2](BlockChain/imgs/cal.png)
+![图2](../imgs/cal.png)
 
 
 
@@ -236,7 +236,7 @@ https://www.coinwarz.com/mining/bitcoin/difficulty-chart
 |---|---|
 |60,000|44,396|
 
-![图2](BlockChain/imgs/effect.png)
+![图2](../imgs/effect.png)
 
 **电价和比特币价格是影响比特币底层存在性的因素（周期）**
 
