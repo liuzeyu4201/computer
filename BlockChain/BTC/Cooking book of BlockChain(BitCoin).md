@@ -45,7 +45,7 @@ ex2. 将文字转化为tokens，再embeding到vector space，最后通过hash加
 
 ### Block
 
-![图1](./imgs/chain.png)
+![图1](../imgs/chain.png)
 
 区块（blocks）中含有两个部分Block header 和 Block body.
 
