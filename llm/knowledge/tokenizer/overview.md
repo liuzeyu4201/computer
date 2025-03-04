@@ -39,7 +39,7 @@ tokenizer = AutoTokenizer(path)
 
 查看模型类型的方法：
 
-![image-20250215120156584](D:\User\note\hugging_face\tokenizer\overview.assets\image-20250215120156584.png)
+![modeltype](../overview.assets/image-20250215120156584.png)
 
 
 
