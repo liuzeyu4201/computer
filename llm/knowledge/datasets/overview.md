@@ -15,7 +15,7 @@ dataset = load_dataset(dataset_path)
 
 运行结果：
 
-![datadict](../overview.assets/datasetsdict.png)
+![datadict](../datasets/overview.assets/datasetsdict.png)
 
 ## Dataset（常用）
 
@@ -89,7 +89,7 @@ config = get_dataset_config_names(data_path)
 dataset[:3]		# 出乎意料的是返回的还是一个字典，并且key和取单条数据没有区别，只是key变成了列表
 ```
 
-![example](../overview.assets/scaling.png)
+![example](../datasets/overview.assets/scaling.png)
 
 
 
@@ -131,7 +131,7 @@ dataset.features		# 数据集的列名以及类型
 
   - 将dataset中的列设置为传入的Features对象
 
-  <img src="../overview.assets/cast.png" alt="image-20250217172733969" style="zoom: 80%;" />
+  <img src="../datasets/overview.assets/cast.png" alt="image-20250217172733969" style="zoom: 80%;" />
 
 - dataset.cast_column(old_column, new_column_obj)
 
@@ -144,9 +144,9 @@ dataset.features		# 数据集的列名以及类型
   - 将嵌套的部分提到上一层
   - 示例
 
-  ![flatten1](../overview.assets/flatten1.png)
+  ![flatten1](../datasets/overview.assets/flatten1.png)
 
-  ![flatten2](../overview.assets/flatten2.png)
+  ![flatten2](../datasets/overview.assets/flatten2.png)
 
   - 注意：嵌套的列名发生了改变
 
