@@ -77,17 +77,18 @@ if __name__ == '__main__':
         eval_dataset=test_dataset,
         # compute_metrics=compute_metrics
         # 使用ddp多卡训练
-        ddp_find_unused_parameters=False,
+        # ddp_find_unused_parameters=False,
     )
 
 
-    if local_rank == 0:
-        print("准备开始训练")
+    # if local_rank == 0:
+    #     print("准备开始训练")
     trainer.train()
     # trainer.save_model()  # 保存模型  # 这种存储会将所有的模型都保存，相对来说会占用比较大的空间
     save_path = args_parser.save_path
-    if local_rank == 0:
-        trainer.save_pretrained(save_path)
+    # if local_rank == 0:
+        # trainer.save_pretrained(save_path)
+    model.save_pretrained(save_path)
     # trainer.save_state()  # 保存训练状态（例如优化器状态）
-    dist.destroy_process_group()
+    # dist.destroy_process_group()
 
