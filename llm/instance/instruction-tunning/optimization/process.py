@@ -49,8 +49,8 @@ def generate_prompt(data_point):
             {data_point["instruction"]}
             ### Response:\n
     """
-
-    return {'instruction': instruction, 'labels':data_point["output"]}
+    # modify:labels => tags
+    return {'instruction': instruction, 'tags':data_point["output"]}
 
 
 # def generate_model_input(tokenizer, dataset,MAX_LENGTH=CUTOFF_LEN):
@@ -85,7 +85,7 @@ def generate_model_input(tokenizer, dataset, MAX_LENGTH=CUTOFF_LEN):
     """
     def tokenize(data_point):
         # 拼接 instruction 和 labels，并添加 eos_token
-        combined_text = data_point["instruction"] + data_point["labels"] + tokenizer.eos_token
+        combined_text = data_point["instruction"] + data_point["tags"] + tokenizer.eos_token
         
         # 对拼接后的文本进行 tokenize，并确保长度不超过 MAX_LENGTH
         tokenized_data = tokenizer(
@@ -117,8 +117,9 @@ def generate_model_input(tokenizer, dataset, MAX_LENGTH=CUTOFF_LEN):
             "labels": labels.squeeze(0)
         }
     # 移除不需要的列
-    columns_to_remove = [col for col in ["instruction", "input", "output"] if col in dataset.column_names]
-    return dataset.map(tokenize, remove_columns=columns_to_remove)
+    # modify
+    # columns_to_remove = [col for col in ["instruction", "input", "output"] if col in dataset.column_names]
+    return dataset.map(tokenize, remove_columns=dataset.column_names)
 
 
 
