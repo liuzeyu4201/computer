@@ -27,7 +27,8 @@ dataset = load_dataset(dataset_path, split="train") # split传入的是上述Dat
 
 # 数据集描述函数
 
-- load_dataset_builder
+- load_dataset_builder 
+-用于访问这个数据集的元信息（metadata），如简介、字段结构、标签信息等
 
 ```python
 from datasets import load_dataset_builder
@@ -37,14 +38,15 @@ ds_builder.info.description, ds_builder.info.features
 ```
 
 - get_dataset_split_names
-
+-返回数据集中有哪些划分（split），如 train、test、validation
 ```python
 from datasets import get_dataset_split_names
 get_dataset_split_names(data_path)
 ```
 
 - get_dataset_config_names
-
+-如果一个数据集支持多个配置（configuration），这个函数可以列出所有的配置名
+-比如可能出现一个数据集使用在多个不同子任务中
 ```python
 from datasets import get_dataset_config_names
 # 有些数据集是由多个子数据集组成的，可以查看config，输出一个列表，其中的内容可以作为load_dataset的第二哥参数进行传入

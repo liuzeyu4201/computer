@@ -1,7 +1,9 @@
 # 快速开始
 
 ## Pipeline
-
+- pipeline 是 Hugging Face 提供的任务级接口，让你无需关心模型细节即可完成诸如文本分类、问答、翻译、摘要、生成等任务。
+- pipline 允许多种任务类型
+![piplineFeatures](./overview.assets/pipline.png)
 - 只传入一个任务类型
 
 ```python
@@ -21,6 +23,7 @@ model_name = "your/model/path"
 model = AutoModel.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 classifier = pipeline("sentiment-analysis", model, tokenizer)
+# 注意 model和 tokenizer 载入的model_name 需要匹配
 ```
 
 ## AutoClass
@@ -90,7 +93,7 @@ model.save_pretrained(save_path)
    )
    ```
 
-3. 加载处理器
+3. 加载编码器
 
    ```python
    from transformers import AutoTokenizer

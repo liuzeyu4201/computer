@@ -96,6 +96,20 @@ tokenizer = AutoTokenizer(path)
 
   **注**：使用上面的设置方式要确定词典中的0是适合作为pad
 
+### 例子
+- 当我们想添加一个特殊的tokens： [Gaze],比如当生成这个token时模型可以自动调用眼动追踪。
+我们可以应该如下设置
+```
+1. 将[Gaze]添加到tokenizer的词汇表中
+tokenizer.add_special_tokens({'Gaze': ['[Gaze]']})
+2. 修改文本时，将[Gaze]添加到文本中
+text = "模型可以自动调用眼动追踪[Gaze]"
+encoding = tokenizer(text，return_tensors='pt')
+encoding=tokenizer.encoder(text)
+3. 扩展模型embeding层
+model.resize_token_embeddings(len(tokenizer))
+4. 模型会识别并学习这个特殊的tokens
+```
 
 
 # 填充
